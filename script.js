@@ -159,7 +159,7 @@ function onScrollFrame() {
   if (!prefersReducedMotion && y < window.innerHeight) {
     heroBg.style.transform    = `translateY(${y * 0.35}px)`;
     heroInner.style.transform = `translateY(${y * 0.15}px)`;
-    heroInner.style.opacity   = 1 - (y / window.innerHeight) * 0.9;
+    heroInner.style.opacity   = 1 - (y / window.innerHeight) * 0.3;
   }
 
   ticking = false;

@@ -262,7 +262,7 @@ img { display: block; max-width: 100%; }
   position: relative;
   z-index: 1;
   padding-top: 8rem;
-  padding-bottom: 6rem;
+  padding-bottom: 9rem;
   max-width: 760px;
 }
 
@@ -306,7 +306,7 @@ img { display: block; max-width: 100%; }
 
 .hero__scroll-hint {
   position: absolute;
-  bottom: 2.5rem;
+  bottom: 1rem;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -317,6 +317,12 @@ img { display: block; max-width: 100%; }
   font-size: 0.7rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
+}
+
+@media (max-height: 750px) {
+  .hero__scroll-hint {
+    display: none;
+  }
 }
 
 .hero__scroll-line {
