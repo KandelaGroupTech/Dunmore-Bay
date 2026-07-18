@@ -35,7 +35,7 @@ const prefersReducedMotion =
 const revealEls = document.querySelectorAll(
   '.service-card, .process__step, .whyus__point, .whyus__card, ' +
   '.about__content, .about__image-col, .trust__item, .contact__content, ' +
-  '.contact__form, .section__header'
+  '.contact__form, .section__header, .gap__compare, .journey'
 );
 
 // Directional variants: side columns slide in from their own side
@@ -218,3 +218,15 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     }
   });
 });
+
+// ── Text Rotator (Questions) ──────────────────────────────────────────────────
+const questions = document.querySelectorAll('.questions__question');
+let currentQuestionIndex = 0;
+
+if (questions.length > 0 && !prefersReducedMotion) {
+  setInterval(() => {
+    questions[currentQuestionIndex].classList.remove('active');
+    currentQuestionIndex = (currentQuestionIndex + 1) % questions.length;
+    questions[currentQuestionIndex].classList.add('active');
+  }, 4000); // 4 seconds per question
+}

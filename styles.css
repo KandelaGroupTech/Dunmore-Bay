@@ -830,12 +830,170 @@ img { display: block; max-width: 100%; }
 /* ── Parallax layers ────────────────────────────────────────────────────────── */
 .hero__bg, .hero__inner { will-change: transform; }
 
+/* ── New Sections (Questions, Gap, Journey) ─────────────────────────────────── */
+
+.questions {
+  padding: 8rem 0 4rem;
+  background-color: var(--teal-faint);
+  text-align: center;
+}
+
+.questions__inner {
+  max-width: 800px;
+}
+
+.questions__eyebrow {
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--teal);
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+.questions__rotator {
+  position: relative;
+  height: 120px; /* fixed height to prevent layout shifts */
+  margin-bottom: 2rem;
+  overflow: hidden;
+}
+
+.questions__question {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  font-family: var(--font-head);
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  font-style: italic;
+  color: var(--black);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  pointer-events: none;
+}
+
+.questions__question.active {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.questions__static {
+  display: none; /* hidden visually, but available for screen readers if aria-hidden is removed, though we handle fallback */
+}
+
+.questions__answer {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--teal-dark);
+  margin-bottom: 2.5rem;
+}
+
+.gap {
+  background-color: var(--black);
+  color: var(--white);
+  padding: 6rem 0;
+  text-align: center;
+}
+
+.gap__inner {
+  max-width: 900px;
+}
+
+.gap .section__eyebrow { color: var(--teal-light); }
+.gap .section__heading { color: var(--white); margin-bottom: 2rem; }
+
+.gap__body {
+  font-size: 1.1rem;
+  color: var(--grey-300);
+  margin-bottom: 4rem;
+  max-width: 700px;
+  margin-inline: auto;
+}
+
+.gap__compare {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  text-align: left;
+}
+
+.gap__col {
+  padding: 2rem;
+  background: var(--grey-900);
+  border-radius: var(--radius);
+  border: 1px solid rgba(255,255,255,0.05);
+}
+
+.gap__col--highlight {
+  background: rgba(0, 100, 100, 0.1);
+  border-color: var(--teal);
+}
+
+.gap__col-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 1rem;
+}
+
+.gap__col p {
+  font-size: 0.95rem;
+  color: var(--grey-300);
+  margin: 0;
+}
+
+.journey {
+  margin: 4rem 0 5rem;
+  text-align: center;
+}
+
+.journey__track {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.journey__node {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--grey-500);
+  padding: 0.5rem 1rem;
+  background: var(--grey-100);
+  border-radius: 20px;
+}
+
+.journey__node--accent {
+  background: var(--teal);
+  color: var(--white);
+}
+
+.journey__arrow {
+  color: var(--grey-300);
+  font-weight: 300;
+}
+
+.journey__caption {
+  font-size: 0.9rem;
+  color: var(--teal);
+  font-weight: 500;
+  font-style: italic;
+}
+
+
 /* ── Reduced motion ─────────────────────────────────────────────────────────── */
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .reveal { opacity: 1; transform: none; transition: none; }
   .hero__scroll-line { animation: none; }
   .scroll-progress { display: none; }
+  .questions__rotator { height: auto; }
+  .questions__question { position: relative; opacity: 1; transform: none; margin-bottom: 1rem; font-size: 1.2rem;}
+  .questions__question:not(.active) { display: none; }
 }
 
 /* ── Responsive ─────────────────────────────────────────────────────────────── */
