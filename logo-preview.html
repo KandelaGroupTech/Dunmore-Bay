@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ronak Ventures — Logo Options</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --teal: #006464;
+      --black: #0A0A0A;
+      --white: #ffffff;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f0f0f0;
+      color: var(--black);
+      min-height: 100vh;
+      padding: 3rem 2rem 5rem;
+    }
+    h1 {
+      text-align: center;
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 0.5rem;
+    }
+    h2 {
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: var(--black);
+    }
+    .subtitle {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #666;
+      margin-bottom: 3.5rem;
+    }
+
+    /* ─── Grid ─────────────────────────────────── */
+    .options {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .option-col {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    .option-label {
+      text-align: center;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #999;
+    }
+    .option-title {
+      text-align: center;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--black);
+    }
+
+    /* ─── Logo cells ────────────────────────────── */
+    .logo-cell {
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 3rem 2.5rem;
+      min-height: 160px;
+    }
+    .logo-cell--white  { background: #ffffff; border: 1px solid #e0e0e0; }
+    .logo-cell--light  { background: #f8f8f8; border: 1px solid #e8e8e8; }
+    .logo-cell--dark   { background: #0A0A0A; }
+    .logo-cell--teal   { background: #006464; }
+
+    .logo-cell svg {
+      width: 100%;
+      height: auto;
+      max-width: 440px;
+    }
+
+    /* ─── Dark / Teal variants: invert colours ── */
+    .logo-cell--dark svg text[fill="#0A0A0A"],
+    .logo-cell--teal svg text[fill="#0A0A0A"] { fill: #ffffff; }
+    .logo-cell--dark svg text[fill="#6b6b6b"]  { fill: rgba(255,255,255,0.5); }
+    .logo-cell--teal svg text[fill="#6b6b6b"]  { fill: rgba(255,255,255,0.7); }
+    .logo-cell--dark svg rect[fill="#006464"],
+    .logo-cell--dark svg rect[fill="#0A0A0A"] { fill: #fff; }
+
+    /* ─── Cell bg labels ────────────────────────── */
+    .bg-row {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .bg-tag {
+      font-size: 0.68rem;
+      letter-spacing: 0.1em;
+      font-weight: 500;
+      color: #aaa;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    /* ─── Description cards ─────────────────────── */
+    .desc-card {
+      background: white;
+      border-radius: 12px;
+      padding: 1.5rem;
+      border: 1px solid #e8e8e8;
+    }
+    .desc-card h4 {
+      font-size: 0.9rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: var(--black);
+    }
+    .desc-card p {
+      font-size: 0.85rem;
+      line-height: 1.65;
+      color: #555;
+    }
+    .desc-card ul {
+      list-style: none;
+      margin-top: 0.75rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+    .desc-card li {
+      font-size: 0.75rem;
+      background: #f0fafa;
+      color: var(--teal);
+      border: 1px solid rgba(0,100,100,0.15);
+      border-radius: 100px;
+      padding: 0.2rem 0.65rem;
+      font-weight: 500;
+    }
+
+    @media (max-width: 700px) {
+      .options { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Ronak Ventures</h1>
+  <h2>Logo Options</h2>
+  <p class="subtitle">Two design directions — shown on white, light, dark, and teal backgrounds</p>
+
+  <div class="options">
+
+    <!-- ═══ OPTION 1 ═══ -->
+    <div class="option-col">
+      <div class="option-label">Option 01</div>
+      <div class="option-title">The Signet — Monogram Badge</div>
+
+      <!-- White bg -->
+      <div class="bg-row">
+        <div class="bg-tag">White background</div>
+        <div class="logo-cell logo-cell--white">
+          <!-- OPTION 1 INLINE SVG — white bg -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 160">
+            <defs>
+              <linearGradient id="g1a" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#007a7a"/>
+                <stop offset="100%" stop-color="#004a4a"/>
+              </linearGradient>
+            </defs>
+            <!-- Badge -->
+            <rect x="0" y="16" width="128" height="128" rx="12" fill="url(#g1a)"/>
+            <rect x="8" y="24" width="112" height="112" rx="7" fill="none" stroke="rgba(255,255,255,0.14)" stroke-width="1"/>
+            <!-- R stem -->
+            <rect x="28" y="42" width="11" height="76" rx="2" fill="white"/>
+            <!-- R top -->
+            <rect x="28" y="42" width="34" height="11" rx="2" fill="white"/>
+            <rect x="57" y="42" width="11" height="9" rx="2" fill="white"/>
+            <rect x="57" y="71" width="11" height="9" rx="2" fill="white"/>
+            <rect x="28" y="71" width="34" height="11" rx="2" fill="white"/>
+            <!-- R leg -->
+            <polygon points="40,82 52,82 76,118 62,118" fill="white"/>
+            <!-- V left -->
+            <polygon points="84,42 96,42 94,118 82,118" fill="rgba(255,255,255,0.9)"/>
+            <!-- V right -->
+            <polygon points="116,42 128,42 96,118 84,118" fill="rgba(255,255,255,0.9)"/>
+            <!-- dot -->
+            <circle cx="116" cy="28" r="4" fill="rgba(255,255,255,0.35)"/>
+            <!-- Wordmark -->
+            <text x="148" y="72" font-family="Georgia,serif" font-size="30" font-weight="bold" letter-spacing="4" fill="#0A0A0A">RONAK</text>
+            <rect x="148" y="80" width="296" height="0.8" fill="#006464" opacity="0.45"/>
+            <text x="148" y="106" font-family="Georgia,serif" font-size="30" font-weight="bold" letter-spacing="4" fill="#0A0A0A">VENTURES</text>
+            <text x="150" y="130" font-family="Arial,sans-serif" font-size="10" letter-spacing="3.5" fill="#006464">M&amp;A TRANSACTION ADVISORY</text>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Dark bg -->
+      <div class="bg-row">
+        <div class="bg-tag">Dark background</div>
+        <div class="logo-cell logo-cell--dark">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 160">
+            <defs>
+              <linearGradient id="g1b" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#007a7a"/>
+                <stop offset="100%" stop-color="#004a4a"/>
+              </linearGradient>
+            </defs>
+            <rect x="0" y="16" width="128" height="128" rx="12" fill="url(#g1b)"/>
+            <rect x="8" y="24" width="112" height="112" rx="7" fill="none" stroke="rgba(255,255,255,0.14)" stroke-width="1"/>
+            <rect x="28" y="42" width="11" height="76" rx="2" fill="white"/>
+            <rect x="28" y="42" width="34" height="11" rx="2" fill="white"/>
+            <rect x="57" y="42" width="11" height="9" rx="2" fill="white"/>
+            <rect x="57" y="71" width="11" height="9" rx="2" fill="white"/>
+            <rect x="28" y="71" width="34" height="11" rx="2" fill="white"/>
+            <polygon points="40,82 52,82 76,118 62,118" fill="white"/>
+            <polygon points="84,42 96,42 94,118 82,118" fill="rgba(255,255,255,0.9)"/>
+            <polygon points="116,42 128,42 96,118 84,118" fill="rgba(255,255,255,0.9)"/>
+            <circle cx="116" cy="28" r="4" fill="rgba(255,255,255,0.35)"/>
+            <text x="148" y="72" font-family="Georgia,serif" font-size="30" font-weight="bold" letter-spacing="4" fill="#ffffff">RONAK</text>
+            <rect x="148" y="80" width="296" height="0.8" fill="#008080" opacity="0.6"/>
+            <text x="148" y="106" font-family="Georgia,serif" font-size="30" font-weight="bold" letter-spacing="4" fill="#ffffff">VENTURES</text>
+            <text x="150" y="130" font-family="Arial,sans-serif" font-size="10" letter-spacing="3.5" fill="#008080">M&amp;A TRANSACTION ADVISORY</text>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Teal bg -->
+      <div class="bg-row">
+        <div class="bg-tag">Teal background</div>
+        <div class="logo-cell logo-cell--teal">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 160">
+            <rect x="0" y="16" width="128" height="128" rx="12" fill="rgba(0,0,0,0.3)"/>
+            <rect x="8" y="24" width="112" height="112" rx="7" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+            <rect x="28" y="42" width="11" height="76" rx="2" fill="white"/>
+            <rect x="28" y="42" width="34" height="11" rx="2" fill="white"/>
+            <rect x="57" y="42" width="11" height="9" rx="2" fill="white"/>
+            <rect x="57" y="71" width="11" height="9" rx="2" fill="white"/>
+            <rect x="28" y="71" width="34" height="11" rx="2" fill="white"/>
+            <polygon points="40,82 52,82 76,118 62,118" fill="white"/>
+            <polygon points="84,42 96,42 94,118 82,118" fill="rgba(255,255,255,0.9)"/>
+            <polygon points="116,42 128,42 96,118 84,118" fill="rgba(255,255,255,0.9)"/>
+            <circle cx="116" cy="28" r="4" fill="rgba(255,255,255,0.3)"/>
+            <text x="148" y="72" font-family="Georgia,serif" font-size="30" font-weight="bold" letter-spacing="4" fill="#ffffff">RONAK</text>
+            <rect x="148" y="80" width="296" height="0.8" fill="rgba(255,255,255,0.4)"/>
+            <text x="148" y="106" font-family="Georgia,serif" font-size="30" font-weight="bold" letter-spacing="4" fill="#ffffff">VENTURES</text>
+            <text x="150" y="130" font-family="Arial,sans-serif" font-size="10" letter-spacing="3.5" fill="rgba(255,255,255,0.75)">M&amp;A TRANSACTION ADVISORY</text>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Description -->
+      <div class="desc-card">
+        <h4>The Signet — Monogram Badge</h4>
+        <p>A strong geometric badge houses a custom <strong>RV</strong> lettermark — structured, block-form type that reads both as initials and as a unified symbol. The stacked "RONAK / VENTURES" wordmark uses bold spaced caps for authority, grounded by the teal M&amp;A tagline. Premium, institutional, bank-grade.</p>
+        <ul>
+          <li>Bold &amp; authoritative</li>
+          <li>Scales to favicon/stamp</li>
+          <li>Strong on all backgrounds</li>
+          <li>Institutional feel</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ═══ OPTION 2 ═══ -->
+    <div class="option-col">
+      <div class="option-label">Option 02</div>
+      <div class="option-title">The Convergence — Abstract Deal Mark</div>
+
+      <!-- White bg -->
+      <div class="bg-row">
+        <div class="bg-tag">White background</div>
+        <div class="logo-cell logo-cell--white">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 160">
+            <defs>
+              <linearGradient id="g2a" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#008080"/>
+                <stop offset="100%" stop-color="#006464"/>
+              </linearGradient>
+            </defs>
+            <!-- Left diamond -->
+            <polygon points="56,80  80,44  104,80  80,116" fill="url(#g2a)" opacity="0.9"/>
+            <!-- Right diamond -->
+            <polygon points="80,80  104,44  128,80  104,116" fill="#0A0A0A" opacity="0.88"/>
+            <!-- Overlap triangle -->
+            <polygon points="80,80  104,44  104,116" fill="#008080" opacity="0.85"/>
+            <!-- Flow lines -->
+            <line x1="16" y1="80" x2="52" y2="80" stroke="#006464" stroke-width="1.5" stroke-dasharray="3,3"/>
+            <line x1="132" y1="80" x2="162" y2="80" stroke="#006464" stroke-width="1.5" stroke-dasharray="3,3"/>
+            <polygon points="52,75 62,80 52,85" fill="#006464" opacity="0.5"/>
+            <polygon points="132,75 122,80 132,85" fill="#006464" opacity="0.5"/>
+            <!-- Wordmark -->
+            <text x="182" y="86" font-family="Georgia,serif" font-size="46" font-weight="700" letter-spacing="-1" fill="#0A0A0A">Ronak</text>
+            <text x="183" y="122" font-family="Georgia,serif" font-size="30" font-weight="400" letter-spacing="8" fill="#006464">Ventures</text>
+            <rect x="182" y="131" width="186" height="0.75" fill="#006464" opacity="0.35"/>
+            <text x="183" y="146" font-family="Arial,sans-serif" font-size="9" letter-spacing="3" fill="#888">M&amp;A TRANSACTION ADVISORY</text>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Dark bg -->
+      <div class="bg-row">
+        <div class="bg-tag">Dark background</div>
+        <div class="logo-cell logo-cell--dark">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 160">
+            <defs>
+              <linearGradient id="g2b" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#008080"/>
+                <stop offset="100%" stop-color="#006464"/>
+              </linearGradient>
+            </defs>
+            <polygon points="56,80  80,44  104,80  80,116" fill="url(#g2b)" opacity="0.95"/>
+            <polygon points="80,80  104,44  128,80  104,116" fill="rgba(255,255,255,0.85)"/>
+            <polygon points="80,80  104,44  104,116" fill="#008080" opacity="0.9"/>
+            <line x1="16" y1="80" x2="52" y2="80" stroke="#008080" stroke-width="1.5" stroke-dasharray="3,3"/>
+            <line x1="132" y1="80" x2="162" y2="80" stroke="#008080" stroke-width="1.5" stroke-dasharray="3,3"/>
+            <polygon points="52,75 62,80 52,85" fill="#008080" opacity="0.6"/>
+            <polygon points="132,75 122,80 132,85" fill="#008080" opacity="0.6"/>
+            <text x="182" y="86" font-family="Georgia,serif" font-size="46" font-weight="700" letter-spacing="-1" fill="#ffffff">Ronak</text>
+            <text x="183" y="122" font-family="Georgia,serif" font-size="30" font-weight="400" letter-spacing="8" fill="#008080">Ventures</text>
+            <rect x="182" y="131" width="186" height="0.75" fill="#008080" opacity="0.4"/>
+            <text x="183" y="146" font-family="Arial,sans-serif" font-size="9" letter-spacing="3" fill="rgba(255,255,255,0.45)">M&amp;A TRANSACTION ADVISORY</text>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Teal bg -->
+      <div class="bg-row">
+        <div class="bg-tag">Teal background</div>
+        <div class="logo-cell logo-cell--teal">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 160">
+            <polygon points="56,80  80,44  104,80  80,116" fill="rgba(255,255,255,0.25)"/>
+            <polygon points="80,80  104,44  128,80  104,116" fill="rgba(0,0,0,0.3)"/>
+            <polygon points="80,80  104,44  104,116" fill="rgba(255,255,255,0.5)"/>
+            <line x1="16" y1="80" x2="52" y2="80" stroke="rgba(255,255,255,0.4)" stroke-width="1.5" stroke-dasharray="3,3"/>
+            <line x1="132" y1="80" x2="162" y2="80" stroke="rgba(255,255,255,0.4)" stroke-width="1.5" stroke-dasharray="3,3"/>
+            <polygon points="52,75 62,80 52,85" fill="rgba(255,255,255,0.4)"/>
+            <polygon points="132,75 122,80 132,85" fill="rgba(255,255,255,0.4)"/>
+            <text x="182" y="86" font-family="Georgia,serif" font-size="46" font-weight="700" letter-spacing="-1" fill="#ffffff">Ronak</text>
+            <text x="183" y="122" font-family="Georgia,serif" font-size="30" font-weight="400" letter-spacing="8" fill="rgba(255,255,255,0.85)">Ventures</text>
+            <rect x="182" y="131" width="186" height="0.75" fill="rgba(255,255,255,0.3)"/>
+            <text x="183" y="146" font-family="Arial,sans-serif" font-size="9" letter-spacing="3" fill="rgba(255,255,255,0.6)">M&amp;A TRANSACTION ADVISORY</text>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Description -->
+      <div class="desc-card">
+        <h4>The Convergence — Abstract Deal Mark</h4>
+        <p>Two interlocking diamond/rhombus shapes represent the two parties in any M&amp;A transaction — distinct yet converging at the deal. Dashed flow lines suggest the transaction process in motion. The mixed serif wordmark pairs a bold <em>Ronak</em> with an elegant spaced <em>Ventures</em> in teal. Sophisticated, modern, distinctive.</p>
+        <ul>
+          <li>Conceptually rich</li>
+          <li>Unique &amp; ownable mark</li>
+          <li>Elegant serif wordmark</li>
+          <li>Boutique advisory feel</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer note -->
+  <p style="text-align:center;margin-top:3rem;font-size:0.8rem;color:#999;letter-spacing:0.05em;">
+    Both options use brand colours White / Black (#0A0A0A) / Teal (#006464). SVG files saved as
+    <code style="background:#e8e8e8;padding:2px 6px;border-radius:4px;">logo-option-1.svg</code> and
+    <code style="background:#e8e8e8;padding:2px 6px;border-radius:4px;">logo-option-2.svg</code>.
+  </p>
+
+</body>
+</html>
