@@ -228,5 +228,5 @@ if (questions.length > 0 && !prefersReducedMotion) {
     questions[currentQuestionIndex].classList.remove('active');
     currentQuestionIndex = (currentQuestionIndex + 1) % questions.length;
     questions[currentQuestionIndex].classList.add('active');
-  }, 4000); // 4 seconds per question
+  }, 8000); // 8 seconds per question
 }
