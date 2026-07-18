@@ -127,15 +127,23 @@ img { display: block; max-width: 100%; }
   top: 0; left: 0; right: 0;
   z-index: 100;
   padding: 1.25rem 0;
-  transition: background var(--transition), box-shadow var(--transition), padding var(--transition);
+  border-bottom: 1px solid rgba(0,100,100,0.12);
+  transition: background var(--transition), box-shadow var(--transition), padding var(--transition), border-color var(--transition);
 }
 
 .header.scrolled {
   background: rgba(10, 10, 10, 0.95);
   backdrop-filter: blur(12px);
   box-shadow: 0 1px 0 rgba(255,255,255,0.06);
+  border-bottom-color: transparent;
   padding: 0.85rem 0;
 }
+
+/* Nav swaps to white once scrolled onto the dark hero */
+.header.scrolled .nav__logo-text { color: var(--white); }
+.header.scrolled .nav__links a { color: rgba(255,255,255,0.8); }
+.header.scrolled .nav__links a:hover { color: var(--white); background: rgba(255,255,255,0.06); }
+.header.scrolled .nav__burger span { background: var(--white); }
 
 .nav {
   display: flex;
@@ -168,7 +176,7 @@ img { display: block; max-width: 100%; }
 .nav__logo-text {
   font-size: 1rem;
   font-weight: 600;
-  color: var(--white);
+  color: var(--grey-900);
   letter-spacing: -0.01em;
 }
 
@@ -181,15 +189,15 @@ img { display: block; max-width: 100%; }
 .nav__links a {
   font-size: 0.9rem;
   font-weight: 500;
-  color: rgba(255,255,255,0.8);
+  color: var(--grey-700);
   padding: 0.5rem 0.85rem;
   border-radius: var(--radius);
   transition: var(--transition);
 }
 
 .nav__links a:hover {
-  color: var(--white);
-  background: rgba(255,255,255,0.06);
+  color: var(--teal);
+  background: rgba(0,100,100,0.06);
 }
 
 .nav__cta {
@@ -215,7 +223,7 @@ img { display: block; max-width: 100%; }
   display: block;
   width: 24px;
   height: 2px;
-  background: var(--white);
+  background: var(--grey-900);
   border-radius: 2px;
   transition: var(--transition);
 }
@@ -1011,7 +1019,8 @@ img { display: block; max-width: 100%; }
     gap: 1.25rem;
     z-index: 99;
   }
-  .nav__links.open a { font-size: 1.25rem; }
+  .nav__links.open a { font-size: 1.25rem; color: var(--white); }
+  .nav__links.open a:hover { color: var(--white); background: rgba(255,255,255,0.06); }
   .nav__burger { display: flex; position: relative; z-index: 200; }
 
   /* burger → X */
