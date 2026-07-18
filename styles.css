@@ -174,10 +174,11 @@ img { display: block; max-width: 100%; }
 }
 
 .nav__logo-text {
-  font-size: 1rem;
-  font-weight: 600;
+  font-family: Calibri, 'Segoe UI', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 500;
   color: var(--grey-900);
-  letter-spacing: -0.01em;
+  letter-spacing: 0;
 }
 
 .nav__links {
