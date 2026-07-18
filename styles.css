@@ -1070,6 +1070,12 @@ img { display: block; max-width: 100%; }
   border-radius: 20px;
 }
 
+.journey__node--inactive {
+  opacity: 0.4;
+  background: transparent;
+  border: 1px solid var(--grey-300);
+}
+
 .journey__node--accent {
   background: var(--teal);
   color: var(--white);
@@ -1078,6 +1084,10 @@ img { display: block; max-width: 100%; }
 .journey__arrow {
   color: var(--grey-300);
   font-weight: 300;
+}
+
+.journey__arrow--inactive {
+  opacity: 0.4;
 }
 
 .journey__caption {
