@@ -16,7 +16,7 @@ export default async function handler(req, res) {
 
     // 1. Send Internal Alert
     const internalAlertResponse = await resend.emails.send({
-      from: 'Dunmore Bay Leads <info@thekandelagroup.com>',
+      from: 'Dunmore Bay Leads <info@dunmorebay.com>',
       to: 'info@dunmorebay.com',
       reply_to: email,
       subject: `New Lead: ${name}`,
@@ -32,7 +32,7 @@ export default async function handler(req, res) {
 
     // 2. Send User Confirmation
     const userConfirmationResponse = await resend.emails.send({
-      from: 'Dunmore Bay Advisors <info@thekandelagroup.com>',
+      from: 'Dunmore Bay Advisors <info@dunmorebay.com>',
       to: email,
       reply_to: 'info@dunmorebay.com',
       subject: 'We received your inquiry - Dunmore Bay Advisors',
