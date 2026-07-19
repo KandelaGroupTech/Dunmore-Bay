@@ -117,12 +117,32 @@ form.addEventListener('submit', e => {
 
   if (!valid) return;
 
-  // Simulate send (replace with your real endpoint / EmailJS / Formspree)
+  // Send to serverless function
   const btn = form.querySelector('button[type="submit"]');
+  const originalText = btn.textContent;
   btn.textContent = 'Sending…';
   btn.disabled = true;
 
-  setTimeout(() => {
+  const formData = {
+    name: document.getElementById('name').value,
+    email: document.getElementById('email').value,
+    company: document.getElementById('company').value,
+    type: document.getElementById('type').value,
+    message: document.getElementById('message').value
+  };
+
+  fetch('/api/contact', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(formData)
+  })
+  .then(async response => {
+    if (!response.ok) {
+      const err = await response.json();
+      throw new Error(err.message || 'Network response was not ok');
+    }
+    
+    // Success State
     form.innerHTML = `
       <div class="form-success">
         <div class="form-success__icon">
@@ -135,7 +155,13 @@ form.addEventListener('submit', e => {
         <p>Thank you for reaching out. We will respond within one business day.</p>
       </div>
     `;
-  }, 1200);
+  })
+  .catch(error => {
+    console.error('Submission failed:', error);
+    alert('Sorry, there was an issue sending your message. Please try again or email us directly.');
+    btn.textContent = originalText;
+    btn.disabled = false;
+  });
 });
 
 // ── Scroll progress bar ───────────────────────────────────────────────────────

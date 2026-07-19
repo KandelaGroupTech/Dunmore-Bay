@@ -1,0 +1,23 @@
+{
+  "name": "dunmore-bay-advisors",
+  "version": "1.0.0",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KandelaGroupTech/Dunmore-Bay.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KandelaGroupTech/Dunmore-Bay/issues"
+  },
+  "homepage": "https://github.com/KandelaGroupTech/Dunmore-Bay#readme",
+  "description": "",
+  "dependencies": {
+    "resend": "^6.17.2"
+  }
+}
