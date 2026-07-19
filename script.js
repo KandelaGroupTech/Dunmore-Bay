@@ -230,3 +230,19 @@ if (questions.length > 0 && !prefersReducedMotion) {
     questions[currentQuestionIndex].classList.add('active');
   }, 8000); // 8 seconds per question
 }
+
+// ── FAQ Accordion ─────────────────────────────────────────────────────────────
+const faqQuestions = document.querySelectorAll('.faq__question');
+faqQuestions.forEach(question => {
+  question.addEventListener('click', () => {
+    const isExpanded = question.getAttribute('aria-expanded') === 'true';
+    
+    // Close all FAQs first (one open at a time)
+    faqQuestions.forEach(q => q.setAttribute('aria-expanded', 'false'));
+    
+    // If the clicked one wasn't expanded, open it
+    if (!isExpanded) {
+      question.setAttribute('aria-expanded', 'true');
+    }
+  });
+});
