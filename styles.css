@@ -1214,7 +1214,9 @@ img { display: block; max-width: 100%; }
   .nav__burger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
   .nav__burger.open span:nth-child(2) { opacity: 0; }
   .nav__burger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  .nav__burger.open span { background: var(--white); }
 
+  .questions__rotator { height: auto; min-height: 40px; }
   .about__inner { grid-template-columns: 1fr; gap: 3rem; }
 
   .whyus__inner { grid-template-columns: 1fr; gap: 3rem; }
