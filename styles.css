@@ -808,6 +808,21 @@ img { display: block; max-width: 100%; }
   max-width: 280px;
 }
 
+.footer__socials {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.footer__socials a {
+  color: rgba(255, 255, 255, 0.45);
+  transition: color var(--transition);
+}
+
+.footer__socials a:hover {
+  color: var(--teal-light);
+}
+
 .footer__links h4 {
   font-size: 0.75rem;
   font-weight: 700;
