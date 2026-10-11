@@ -16,7 +16,7 @@ export default async function handler(req, res) {
 
     // 1. Send Internal Alert
     const internalAlertResponse = await resend.emails.send({
-      from: 'Dunmore Bay Leads <info@thekandelagroup.com>',
+      from: 'First Deal Partners Leads <info@thekandelagroup.com>',
       to: 'info@dunmorebay.com',
       reply_to: email,
       subject: `New Lead: ${name}`,
@@ -32,16 +32,16 @@ export default async function handler(req, res) {
 
     // 2. Send User Confirmation
     const userConfirmationResponse = await resend.emails.send({
-      from: 'Dunmore Bay Advisors <info@thekandelagroup.com>',
+      from: 'First Deal Partners <info@thekandelagroup.com>',
       to: email,
       reply_to: 'info@dunmorebay.com',
-      subject: 'We received your inquiry - Dunmore Bay Advisors',
+      subject: 'We received your inquiry - First Deal Partners',
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; color: #111; line-height: 1.6;">
           <h2 style="color: #006464;">Thanks for reaching out</h2>
           <p>Hi ${name.split(' ')[0]},</p>
           <p>We've received your inquiry. A deal professional will review your information and get back to you shortly.</p>
-          <p>Best regards,<br/>The Dunmore Bay Advisors Team</p>
+          <p>Best regards,<br/>The First Deal Partners Team</p>
         </div>
       `,
     });
